@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Maluchi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>FELIZ CUMPLEAÑOS MALUCHII....</h1>
+    <h2>LA REYNA DE LA CASA </h2>
+    <div class="contenedor">
+        <div class="box">
+            <span style="--i:1;"><img src="/img/imagen1.jpeg" alt=""></span>
+            <span style="--i:2;"><img src="/img/imagen2.jpeg" alt=""></span>
+            <span style="--i:3;"><img src="/img/imagen3.jpeg" alt=""></span>
+            <span style="--i:4;"><img src="/img/imagen4.jpeg" alt=""></span>
+            <span style="--i:5;"><img src="/img/imagen5.jpeg" alt=""></span>
+            <span style="--i:6;"><img src="/img/imagen6.jpeg" alt=""></span>
+            <span style="--i:7;"><img src="/img/imagen7.jpeg" alt=""></span>
+            <span style="--i:8;"><img src="/img/imagen8.jpeg" alt=""></span>
+            
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+
+    <script>
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+        let box = document.querySelector('.box');
+        let degrees = 0;
+    
+        next.addEventListener('click', function() {
+            degrees += 45;
+            box.style.transform = `perspective(1000px) rotateY(${degrees}deg)`;
+        });
+        prev.addEventListener('click', function() {
+        degrees -= 45;
+        box.style.transform = `perspective(1000px) rotateY(${degrees}deg)`;
+    });
+    </script>
+</body>
+</html>
